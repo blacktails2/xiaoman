@@ -1,0 +1,77 @@
+// 1. Import the initial variables
+@import "bulma.min";
+@import "../node_modules/bulma/sass/utilities/_all";
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=6917bb16-80ea-4968-be19-e884fc22d931");
+    @font-face{
+        font-family:"Legacy Serif Book";
+        src:url("../fonts/97c2c577-bf8e-4708-baff-001fd32f4d08.eot?#iefix");
+        src:url("../fonts/97c2c577-bf8e-4708-baff-001fd32f4d08.eot?#iefix") format("eot"),url("../fonts/1aa4f478-0211-4879-a4e6-a0be4a43e71e.woff2") format("woff2"),url("../fonts/54a75543-b5b3-45e1-81aa-b1ad5b50a901.woff") format("woff"),url("../fonts/dfbf3526-722f-44ca-8fc1-5b07cb575fd0.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Legacy Serif Book Italic";
+        src:url("../fonts/b5f110df-dc07-4adc-866a-ec62f641ac54.eot?#iefix");
+        src:url("../fonts/b5f110df-dc07-4adc-866a-ec62f641ac54.eot?#iefix") format("eot"),url("../fonts/1df5c56f-e7a0-44f6-8b60-45f5bbb438d0.woff2") format("woff2"),url("../fonts/5c11ea6e-da06-4fa6-b2b5-872a67579f4f.woff") format("woff"),url("../fonts/6103ef63-5116-480b-b304-6b5bb947cfee.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Legacy Serif Medium";
+        src:url("../fonts/a1c4b7ec-d8df-4b2a-9e93-d716a6027648.eot?#iefix");
+        src:url("../fonts/a1c4b7ec-d8df-4b2a-9e93-d716a6027648.eot?#iefix") format("eot"),url("../fonts/2f9a1521-0f15-4db8-aa61-a04506b6295d.woff2") format("woff2"),url("../fonts/c06e5802-c6d0-4006-9be5-b1c0bc8629bd.woff") format("woff"),url("../fonts/16669343-ea58-41d7-8210-3dae5252a89d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Legacy Serif Medium Italic";
+        src:url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix");
+        src:url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix") format("eot"),url("../fonts/587a727c-a464-4ab4-8dc3-55a2306480f3.woff2") format("woff2"),url("../fonts/a2f3647f-f85d-4088-b934-d7e9551a9255.woff") format("woff"),url("../fonts/e008d5d6-3100-4717-8a57-9c983dd7e0b9.ttf") format("truetype");
+    }
+$egmedium: 'Legacy Serif Medium', serif;
+a{
+	color: black;
+}
+.is-fullheight{
+	height: 100vh;
+	background: url('../img/top.jpg') center center;
+	background-size: cover;
+}
+#menu{
+	position: fixed;
+	top: 30px;
+	left: 30px;
+}
+#logo{
+	position: absolute;
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+}
+#social{
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	#links{
+		img{
+			margin-left: 10px;
+		}
+		a{
+			transition: ease all 0.6s;
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+	}
+	#lang{
+		font-family: $egmedium;
+		color: white;
+		text-align: right;
+		margin-top: 10px;
+		letter-spacing: 0.2em;
+		.active{
+			color: white;
+		}
+		.inactive{
+			color: rgba(255, 255, 255, 0.5);
+			transition: ease all 0.6s;
+			&:hover{
+				color: rgba(255,255,255,1);
+			}
+		}
+	}
+}
