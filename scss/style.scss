@@ -22,12 +22,83 @@
         src:url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix");
         src:url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix") format("eot"),url("../fonts/587a727c-a464-4ab4-8dc3-55a2306480f3.woff2") format("woff2"),url("../fonts/a2f3647f-f85d-4088-b934-d7e9551a9255.woff") format("woff"),url("../fonts/e008d5d6-3100-4717-8a57-9c983dd7e0b9.ttf") format("truetype");
     }
+    @font-face{
+    	font-family: 'xiaoman icons';
+    	src: url('../fonts/xiaoman-Regular.eot');
+    	src:url("../fonts/xiaoman-Regular.eot") format("eot"),url("../fonts/xiaoman-Regular.woff2") format("woff2"),url("../fonts/xiaoman-Regular.woff") format("woff");
+    }
 $egmedium: 'Legacy Serif Medium', serif;
+$anime: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
+$jpbody: 'Legacy Serif Book', "I-OTF明朝オールドPro M", "IwaOMinPro-Md", serif;
+$jphead: 'Legacy Serif Medium', 'PKizaKinryouStdN-Bold', serif;
+$icon: 'xiaoman icons';
+$main: #D8D8C0;
+
+body{
+	background-color: $main;
+	overflow: hidden;
+}
+.relative{
+	position: relative;
+	height: 500px;
+}
+.content.ma100{
+	margin-top: calc(100px - 3rem);
+}
+#jp{
+		font-family: $jpbody;
+		h2, h3, h4, h5, h6{
+			font-family: $jphead;
+		}
+		h2{
+			text-align: center;
+			font-size: 38px;
+			margin-top: -30px;
+			margin-bottom: 50px;
+		}
+		h3{
+			font-size: 27px;
+			margin-bottom: 0.4em;
+			margin-top: 0;
+		}
+		h4{
+			font-size: 16px;
+			letter-spacing: 0.05em;
+			font-weight: normal;
+			margin-top: -7px;
+			margin-bottom: 20px;
+		}
+		h5{
+			font-size: 20px;
+		}
+		h6{
+			font-size: 20px;
+			margin-bottom: 0.3rem;
+		}
+		p{
+			font-size: 16px;
+			line-height: 1.8;
+		}
+	}
 a{
 	color: black;
 }
+h5{
+	position: absolute;
+	top: 17px;
+	right: 20px;
+	border-bottom: 1px solid black;
+}
 .is-fullheight{
 	height: 100vh;
+}
+footer{
+	text-align: center;
+	margin-top: 200px;
+	margin-bottom: 7px;
+	font-family: "Legacy Serif Book Italic";
+}
+#top{
 	background: url('../img/top.jpg') center center;
 	background-size: cover;
 }
@@ -35,6 +106,10 @@ a{
 	position: fixed;
 	top: 30px;
 	left: 30px;
+	transition: $anime;
+	&:hover{
+		opacity: 0.5;
+	}
 }
 #logo{
 	position: absolute;
@@ -51,7 +126,7 @@ a{
 			margin-left: 10px;
 		}
 		a{
-			transition: ease all 0.6s;
+			transition: $anime;
 			&:hover{
 				opacity: 0.5;
 			}
@@ -68,10 +143,101 @@ a{
 		}
 		.inactive{
 			color: rgba(255, 255, 255, 0.5);
-			transition: ease all 0.6s;
+			transition: $anime;
 			&:hover{
 				color: rgba(255,255,255,1);
 			}
 		}
 	}
+}
+.content{
+	margin-top: calc(200px - 3rem);
+	padding-left: 0;
+	padding-right: 0;
+}
+.photo{
+	margin-top: 200px;
+	background-size: cover;
+	background-position: center center;
+}
+.iconlink{
+	font-family: $icon;
+	font-size: 25px;
+	border: 1px solid black;
+	position: relative;
+	transition: $anime;
+	overflow: hidden;
+	z-index: 2;
+	display: inline-block;
+	padding: 0 15px 2px;
+	&::before{
+		overflow: hidden;
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transform: translateY(100%);
+		background-color: black;
+		transition: $anime;
+		z-index: -1;
+	}
+	&:hover{
+		color: $main;
+		&::before{
+			transform: translateY(0);
+		}
+	}
+}
+#img1{
+	background-image: url('../img/img1.jpg');
+}
+#img2{
+	background-image: url('../img/img2.jpg');
+}
+.lefttext{
+	position: relative;
+	padding: 15px 20px 0 10px;
+}
+.righttext{
+	position: relative;
+	padding: 15px 10px 0 20px;
+}
+.rightphoto{
+	position: absolute;
+	width: 50vw;
+	height: 500px;
+	background-size: cover;
+	background-position: center center;
+}
+.leftphoto{
+	right: 0;
+	position: absolute;
+	width: 50vw;
+	height: 500px;
+	background-size: cover;
+	background-position: center center;
+}
+.exphoto{
+	background-size: cover;
+	background-position: center center;
+	height: 400px;
+	width: 100%;
+}
+#extai{
+	background-image: url('../img/extai.png');
+}
+#exkyo{
+	background-image: url('../img/exkyoto.png');
+}
+#profile{
+	background-image: url('../img/profile.jpg');
+}
+#class{
+	background-image: url('../img/class.jpg');
+}
+#gallery{
+	background-image: url('../img/gallery.jpg');
 }

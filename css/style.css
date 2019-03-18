@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=6917bb16-80ea-4968-be19-e884fc22d931");
 @-webkit-keyframes spinAround {
@@ -222,7 +223,7 @@ code, pre {
   font-family: monospace; }
 
 body {
-  color: #4a4a4a;
+  color: #1e1e1e;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5; }
@@ -7104,18 +7105,79 @@ a.panel-block:hover, label.panel-block:hover {
   src: url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix");
   src: url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix") format("eot"), url("../fonts/587a727c-a464-4ab4-8dc3-55a2306480f3.woff2") format("woff2"), url("../fonts/a2f3647f-f85d-4088-b934-d7e9551a9255.woff") format("woff"), url("../fonts/e008d5d6-3100-4717-8a57-9c983dd7e0b9.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'xiaoman icons';
+  src: url("../fonts/xiaoman-Regular.eot");
+  src: url("../fonts/xiaoman-Regular.eot") format("eot"), url("../fonts/xiaoman-Regular.woff2") format("woff2"), url("../fonts/xiaoman-Regular.woff") format("woff"); }
+
+body {
+  background-color: #D8D8C0;
+  overflow: hidden; }
+
+.relative {
+  position: relative;
+  height: 500px; }
+
+.content.ma100 {
+  margin-top: calc(100px - 3rem); }
+
+#jp {
+  font-family: "Legacy Serif Book", "I-OTF明朝オールドPro M", "IwaOMinPro-Md", serif; }
+  #jp h2, #jp h3, #jp h4, #jp h5, #jp h6 {
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
+  #jp h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-top: -30px;
+    margin-bottom: 50px; }
+  #jp h3 {
+    font-size: 27px;
+    margin-bottom: 0.4em;
+    margin-top: 0; }
+  #jp h4 {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    margin-top: -7px;
+    margin-bottom: 20px; }
+  #jp h5 {
+    font-size: 20px; }
+  #jp h6 {
+    font-size: 20px;
+    margin-bottom: 0.3rem; }
+  #jp p {
+    font-size: 16px;
+    line-height: 1.8; }
+
 a {
   color: black; }
 
+h5 {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  border-bottom: 1px solid black; }
+
 .is-fullheight {
-  height: 100vh;
+  height: 100vh; }
+
+footer {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 7px;
+  font-family: "Legacy Serif Book Italic"; }
+
+#top {
   background: url("../img/top.jpg") center center;
   background-size: cover; }
 
 #menu {
   position: fixed;
   top: 30px;
-  left: 30px; }
+  left: 30px;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
+  #menu:hover {
+    opacity: 0.5; }
 
 #logo {
   position: absolute;
@@ -7130,7 +7192,7 @@ a {
   #social #links img {
     margin-left: 10px; }
   #social #links a {
-    transition: ease all 0.6s; }
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
     #social #links a:hover {
       opacity: 0.5; }
   #social #lang {
@@ -7143,6 +7205,94 @@ a {
       color: white; }
     #social #lang .inactive {
       color: rgba(255, 255, 255, 0.5);
-      transition: ease all 0.6s; }
+      transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
       #social #lang .inactive:hover {
         color: white; }
+
+.content {
+  margin-top: calc(200px - 3rem);
+  padding-left: 0;
+  padding-right: 0; }
+
+.photo {
+  margin-top: 200px;
+  background-size: cover;
+  background-position: center center; }
+
+.iconlink {
+  font-family: "xiaoman icons";
+  font-size: 25px;
+  border: 1px solid black;
+  position: relative;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
+  overflow: hidden;
+  z-index: 2;
+  display: inline-block;
+  padding: 0 15px 2px; }
+  .iconlink::before {
+    overflow: hidden;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    background-color: black;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
+    z-index: -1; }
+  .iconlink:hover {
+    color: #D8D8C0; }
+    .iconlink:hover::before {
+      transform: translateY(0); }
+
+#img1 {
+  background-image: url("../img/img1.jpg"); }
+
+#img2 {
+  background-image: url("../img/img2.jpg"); }
+
+.lefttext {
+  position: relative;
+  padding: 15px 20px 0 10px; }
+
+.righttext {
+  position: relative;
+  padding: 15px 10px 0 20px; }
+
+.rightphoto {
+  position: absolute;
+  width: 50vw;
+  height: 500px;
+  background-size: cover;
+  background-position: center center; }
+
+.leftphoto {
+  right: 0;
+  position: absolute;
+  width: 50vw;
+  height: 500px;
+  background-size: cover;
+  background-position: center center; }
+
+.exphoto {
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  width: 100%; }
+
+#extai {
+  background-image: url("../img/extai.png"); }
+
+#exkyo {
+  background-image: url("../img/exkyoto.png"); }
+
+#profile {
+  background-image: url("../img/profile.jpg"); }
+
+#class {
+  background-image: url("../img/class.jpg"); }
+
+#gallery {
+  background-image: url("../img/gallery.jpg"); }
