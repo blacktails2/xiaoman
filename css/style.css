@@ -7123,9 +7123,15 @@ body {
 
 #jp {
   font-family: "Legacy Serif Book", "I-OTF明朝オールドPro M", "IwaOMinPro-Md", serif; }
-  #jp h2, #jp h3, #jp h4, #jp h5, #jp h6 {
+  #jp h3,
+  #jp h4,
+  #jp h5,
+  #jp h6 {
     font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
+  #jp #menu p {
+    font-family: "PKizaKinryouStdN-Bold", serif; }
   #jp h2 {
+    font-family: "PKizaKinryouStdN-Bold", serif;
     text-align: center;
     font-size: 38px;
     margin-top: -30px;
@@ -7171,14 +7177,6 @@ footer {
   background: url("../img/top.jpg") center center;
   background-size: cover; }
 
-#menu {
-  position: fixed;
-  top: 30px;
-  left: 30px;
-  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
-  #menu:hover {
-    opacity: 0.5; }
-
 #logo {
   position: absolute;
   left: 50%;
@@ -7189,25 +7187,27 @@ footer {
   position: absolute;
   right: 30px;
   top: 30px; }
-  #social #links img {
-    margin-left: 10px; }
-  #social #links a {
-    transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
-    #social #links a:hover {
-      opacity: 0.5; }
-  #social #lang {
+  #social .lang {
     font-family: "Legacy Serif Medium", serif;
     color: white;
     text-align: right;
     margin-top: 10px;
     letter-spacing: 0.2em; }
-    #social #lang .active {
+    #social .lang .active {
       color: white; }
-    #social #lang .inactive {
+    #social .lang .inactive {
       color: rgba(255, 255, 255, 0.5);
       transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
-      #social #lang .inactive:hover {
+      #social .lang .inactive:hover {
         color: white; }
+
+.links a {
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
+  margin-left: 10px; }
+  .links a:hover {
+    opacity: 0.5; }
+  .links a:first-child {
+    margin-left: 0; }
 
 .content {
   margin-top: calc(200px - 3rem);
@@ -7296,11 +7296,85 @@ footer {
 #exkyo {
   background-image: url("../img/exkyoto.png"); }
 
-#profile {
+#profilephoto {
   background-image: url("../img/profile.jpg"); }
 
-#class {
+#classphoto {
   background-image: url("../img/class.jpg"); }
 
-#gallery {
+#galleryphoto {
   background-image: url("../img/gallery.jpg"); }
+
+.menu-btn {
+  font-family: "xiaoman icons";
+  position: fixed;
+  top: 20px;
+  left: 35px;
+  z-index: 999;
+  display: inline;
+  font-size: 32px; }
+  .menu-btn:hover {
+    opacity: 0.5; }
+
+.menu-btn a {
+  display: inline-block;
+  text-decoration: none;
+  /* safari hack */ }
+
+.btn-open:after {
+  color: white;
+  font-family: "xiaoman icons";
+  content: "D";
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
+
+.btn-open:hover:after {
+  opacity: 0.5; }
+
+.btn-close:after {
+  color: #fff;
+  content: "C";
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
+  font-family: "xiaoman icons"; }
+
+.btn-close:hover:after {
+  opacity: 0.5; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); }
+  .overlay #menu {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    margin-left: 35px; }
+    .overlay #menu div p {
+      font-size: 21px;
+      margin-bottom: 10px;
+      letter-spacing: 0.1em; }
+      .overlay #menu div p a {
+        color: white;
+        transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
+        .overlay #menu div p a:hover {
+          opacity: 0.5; }
+  .overlay .links {
+    margin-top: 50px; }
+  .overlay .lang {
+    font-family: "Legacy Serif Medium", serif;
+    color: white;
+    text-align: left;
+    margin-top: 10px;
+    letter-spacing: 0.2em; }
+    .overlay .lang .active {
+      color: white; }
+    .overlay .lang .inactive {
+      color: rgba(255, 255, 255, 0.5);
+      transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
+      .overlay .lang .inactive:hover {
+        color: white; }

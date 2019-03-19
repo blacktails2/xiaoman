@@ -1,7 +1,7 @@
 {
 .appVersion = "1219";
 DisplayStrings = (
-AB
+ABCD
 );
 date = "2019-03-18 03:33:50 +0000";
 designer = "Masaki Ando";
@@ -2261,20 +2261,71 @@ unicode = 0042;
 },
 {
 glyphname = C;
+lastChange = "2019-03-19 14:16:56 +0000";
 layers = (
 {
 layerId = "1BBA0DD9-A976-4C4B-A678-4573244C32E4";
-width = 600;
+paths = (
+{
+closed = 1;
+nodes = (
+"0 668 LINE",
+"32 700 LINE",
+"698 31 LINE",
+"666 -1 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"0 31 LINE",
+"666 700 LINE",
+"698 668 LINE",
+"32 -1 LINE"
+);
+}
+);
+width = 698;
 }
 );
 unicode = 0043;
 },
 {
 glyphname = D;
+lastChange = "2019-03-19 14:16:00 +0000";
 layers = (
 {
 layerId = "1BBA0DD9-A976-4C4B-A678-4573244C32E4";
-width = 600;
+paths = (
+{
+closed = 1;
+nodes = (
+"0 655 LINE",
+"0 700 LINE",
+"745 700 LINE",
+"745 655 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"0 328 LINE",
+"0 373 LINE",
+"448 373 LINE",
+"448 328 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"0 0 LINE",
+"0 45 LINE",
+"626 45 LINE",
+"626 0 LINE"
+);
+}
+);
+width = 745;
 }
 );
 unicode = 0044;

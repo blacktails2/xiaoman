@@ -14,22 +14,40 @@
 
 <body id="jp">
 	<section class="section is-fullheight" id="top">
-		<div id="menu">
-			<a href=""><img src='img/pc/menu.svg' alt=""></a>
+		<div class="menu-btn">
+			<a class="btn-open" href="javascript:void(0)"></a>
+		</div>
+		<div class="overlay">
+			<div id="menu">
+				<div>
+					<p><a href="#top">トップ</a></p>
+					<p><a href="#profilephoto">謝 小曼</a></p>
+					<p><a href="#exhibit">展示 / イベント</a></p>
+					<p><a href="#class">中国茶教室</a></p>
+					<p><a href="#gallery">ギャラリー</a></p>
+					<p><a href="#access">アクセス</a></p>
+				</div>
+				<div class="links">
+					<a href=""><img src="img/pc/insta-taipei.svg" alt=""></a>
+					<a href=""><img src="img/pc/insta-kyoto.svg" alt=""></a>
+					<a href=""><img src="img/pc/facebook.svg" alt=""></a>
+				</div>
+				<p class="lang"><a href="index.html" class="active">JP</a> / <a href="" class="inactive">CH</a> / <a href="" class="inactive">EN</a></p>
+			</div>
 		</div>
 		<div id="logo">
 			<img src="img/pc/logo.svg" alt="">
 		</div>
 		<div id="social">
-			<div id="links">
+			<div class="links">
 				<a href=""><img src="img/pc/insta-taipei.svg" alt=""></a>
 				<a href=""><img src="img/pc/insta-kyoto.svg" alt=""></a>
 				<a href=""><img src="img/pc/facebook.svg" alt=""></a>
 			</div>
-			<p id="lang"><a href="index.html" class="active">JP</a> / <a href="" class="inactive">CH</a> / <a href="" class="inactive">EN</a></p>
+			<p class="lang"><a href="index.html" class="active">JP</a> / <a href="" class="inactive">CH</a> / <a href="" class="inactive">EN</a></p>
 		</div>
 	</section>
-	<section class="section content">
+	<section class="section content" id="profile">
 		<div class="container">
 			<div class="columns is-variable is-0">
 				<div class="column">
@@ -41,13 +59,13 @@
 					</div>
 				</div>
 				<div class="column relative">
-					<div class="rightphoto" id="profile"></div>
+					<div class="rightphoto" id="profilephoto"></div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="section photo is-fullheight" id="img1"></section>
-	<section class="section content">
+	<section class="section content" id="exhibit">
 		<div class="container">
 			<h2>展示 / イベント</h2>
 			<div class="columns is-variable is-0">
@@ -74,7 +92,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="section content">
+	<section class="section content" id="class">
 		<div class="container">
 			<div class="columns is-variable is-0">
 				<div class="column">
@@ -98,16 +116,16 @@
 					</div>
 				</div>
 				<div class="column relative">
-					<div class="rightphoto" id="class"></div>
+					<div class="rightphoto" id="classphoto"></div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="section content ma100">
+	<section class="section content ma100" id="gallery">
 		<div class="container">
 			<div class="columns is-variable is-0">
 				<div class="column relative">
-					<div class="leftphoto" id="gallery"></div>
+					<div class="leftphoto" id="galleryphoto"></div>
 				</div>
 				<div class="column">
 					<div class="righttext">
@@ -127,7 +145,7 @@
 		</div>
 	</section>
 	<section class="section photo is-fullheight" id="img2"></section>
-	<section class="section content">
+	<section class="section content" id="access">
 		<div class="container">
 			<h2>アクセス</h2>
 			<div class="columns is-variable is-0">
@@ -578,6 +596,29 @@
 	<script>
 	var scroll = new SmoothScroll('a[href*="#"]');
 	</script>
+	<script>
+	(function($) {
+
+		$(".menu-btn a").click(function() {
+			event.preventDefault();
+			$(".overlay").fadeToggle(200);
+			$(this).toggleClass('btn-open').toggleClass('btn-close');
+		});
+
+		$('.overlay').on('click', function() {
+			$(".overlay").fadeToggle(200);
+			$(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+		});
+
+		$('.menu a').on('click', function() {
+			event.preventDefault();
+			$(".overlay").fadeToggle(200);
+			$(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+		});
+
+	}(jQuery));
+	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPXRq0cIGmNHhF9ofN61bIZXqvQZa-cFY&callback=initializeMaps" async defer></script>
 </body>
+
 </html>

@@ -2,165 +2,204 @@
 @import "bulma.min";
 @import "../node_modules/bulma/sass/utilities/_all";
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=6917bb16-80ea-4968-be19-e884fc22d931");
-    @font-face{
-        font-family:"Legacy Serif Book";
-        src:url("../fonts/97c2c577-bf8e-4708-baff-001fd32f4d08.eot?#iefix");
-        src:url("../fonts/97c2c577-bf8e-4708-baff-001fd32f4d08.eot?#iefix") format("eot"),url("../fonts/1aa4f478-0211-4879-a4e6-a0be4a43e71e.woff2") format("woff2"),url("../fonts/54a75543-b5b3-45e1-81aa-b1ad5b50a901.woff") format("woff"),url("../fonts/dfbf3526-722f-44ca-8fc1-5b07cb575fd0.ttf") format("truetype");
-    }
-    @font-face{
-        font-family:"Legacy Serif Book Italic";
-        src:url("../fonts/b5f110df-dc07-4adc-866a-ec62f641ac54.eot?#iefix");
-        src:url("../fonts/b5f110df-dc07-4adc-866a-ec62f641ac54.eot?#iefix") format("eot"),url("../fonts/1df5c56f-e7a0-44f6-8b60-45f5bbb438d0.woff2") format("woff2"),url("../fonts/5c11ea6e-da06-4fa6-b2b5-872a67579f4f.woff") format("woff"),url("../fonts/6103ef63-5116-480b-b304-6b5bb947cfee.ttf") format("truetype");
-    }
-    @font-face{
-        font-family:"Legacy Serif Medium";
-        src:url("../fonts/a1c4b7ec-d8df-4b2a-9e93-d716a6027648.eot?#iefix");
-        src:url("../fonts/a1c4b7ec-d8df-4b2a-9e93-d716a6027648.eot?#iefix") format("eot"),url("../fonts/2f9a1521-0f15-4db8-aa61-a04506b6295d.woff2") format("woff2"),url("../fonts/c06e5802-c6d0-4006-9be5-b1c0bc8629bd.woff") format("woff"),url("../fonts/16669343-ea58-41d7-8210-3dae5252a89d.ttf") format("truetype");
-    }
-    @font-face{
-        font-family:"Legacy Serif Medium Italic";
-        src:url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix");
-        src:url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix") format("eot"),url("../fonts/587a727c-a464-4ab4-8dc3-55a2306480f3.woff2") format("woff2"),url("../fonts/a2f3647f-f85d-4088-b934-d7e9551a9255.woff") format("woff"),url("../fonts/e008d5d6-3100-4717-8a57-9c983dd7e0b9.ttf") format("truetype");
-    }
-    @font-face{
-    	font-family: 'xiaoman icons';
-    	src: url('../fonts/xiaoman-Regular.eot');
-    	src:url("../fonts/xiaoman-Regular.eot") format("eot"),url("../fonts/xiaoman-Regular.woff2") format("woff2"),url("../fonts/xiaoman-Regular.woff") format("woff");
-    }
-$egmedium: 'Legacy Serif Medium', serif;
+
+@font-face {
+	font-family: "Legacy Serif Book";
+	src: url("../fonts/97c2c577-bf8e-4708-baff-001fd32f4d08.eot?#iefix");
+	src: url("../fonts/97c2c577-bf8e-4708-baff-001fd32f4d08.eot?#iefix") format("eot"), url("../fonts/1aa4f478-0211-4879-a4e6-a0be4a43e71e.woff2") format("woff2"), url("../fonts/54a75543-b5b3-45e1-81aa-b1ad5b50a901.woff") format("woff"), url("../fonts/dfbf3526-722f-44ca-8fc1-5b07cb575fd0.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Legacy Serif Book Italic";
+	src: url("../fonts/b5f110df-dc07-4adc-866a-ec62f641ac54.eot?#iefix");
+	src: url("../fonts/b5f110df-dc07-4adc-866a-ec62f641ac54.eot?#iefix") format("eot"), url("../fonts/1df5c56f-e7a0-44f6-8b60-45f5bbb438d0.woff2") format("woff2"), url("../fonts/5c11ea6e-da06-4fa6-b2b5-872a67579f4f.woff") format("woff"), url("../fonts/6103ef63-5116-480b-b304-6b5bb947cfee.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Legacy Serif Medium";
+	src: url("../fonts/a1c4b7ec-d8df-4b2a-9e93-d716a6027648.eot?#iefix");
+	src: url("../fonts/a1c4b7ec-d8df-4b2a-9e93-d716a6027648.eot?#iefix") format("eot"), url("../fonts/2f9a1521-0f15-4db8-aa61-a04506b6295d.woff2") format("woff2"), url("../fonts/c06e5802-c6d0-4006-9be5-b1c0bc8629bd.woff") format("woff"), url("../fonts/16669343-ea58-41d7-8210-3dae5252a89d.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Legacy Serif Medium Italic";
+	src: url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix");
+	src: url("../fonts/341a7c5a-cbb2-4982-980b-0a4351c498b3.eot?#iefix") format("eot"), url("../fonts/587a727c-a464-4ab4-8dc3-55a2306480f3.woff2") format("woff2"), url("../fonts/a2f3647f-f85d-4088-b934-d7e9551a9255.woff") format("woff"), url("../fonts/e008d5d6-3100-4717-8a57-9c983dd7e0b9.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'xiaoman icons';
+	src: url('../fonts/xiaoman-Regular.eot');
+	src: url("../fonts/xiaoman-Regular.eot") format("eot"), url("../fonts/xiaoman-Regular.woff2") format("woff2"), url("../fonts/xiaoman-Regular.woff") format("woff");
+}
+
+$egmedium: 'Legacy Serif Medium',
+serif;
 $anime: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
-$jpbody: 'Legacy Serif Book', "I-OTF明朝オールドPro M", "IwaOMinPro-Md", serif;
-$jphead: 'Legacy Serif Medium', 'PKizaKinryouStdN-Bold', serif;
+$jpbody: 'Legacy Serif Book',
+"I-OTF明朝オールドPro M",
+"IwaOMinPro-Md",
+serif;
+$jphead: 'Legacy Serif Medium',
+'PKizaKinryouStdN-Bold',
+serif;
+$onjp: 'PKizaKinryouStdN-Bold',
+serif;
 $icon: 'xiaoman icons';
 $main: #D8D8C0;
 
-body{
+body {
 	background-color: $main;
 	overflow: hidden;
 }
-.relative{
+
+.relative {
 	position: relative;
 	height: 500px;
 }
-.content.ma100{
+
+.content.ma100 {
 	margin-top: calc(100px - 3rem);
 }
-#jp{
-		font-family: $jpbody;
-		h2, h3, h4, h5, h6{
-			font-family: $jphead;
-		}
-		h2{
-			text-align: center;
-			font-size: 38px;
-			margin-top: -30px;
-			margin-bottom: 50px;
-		}
-		h3{
-			font-size: 27px;
-			margin-bottom: 0.4em;
-			margin-top: 0;
-		}
-		h4{
-			font-size: 16px;
-			letter-spacing: 0.05em;
-			font-weight: normal;
-			margin-top: -7px;
-			margin-bottom: 20px;
-		}
-		h5{
-			font-size: 20px;
-		}
-		h6{
-			font-size: 20px;
-			margin-bottom: 0.3rem;
-		}
-		p{
-			font-size: 16px;
-			line-height: 1.8;
-		}
+
+#jp {
+	font-family: $jpbody;
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $jphead;
 	}
-a{
+	#menu p{
+		font-family: $onjp;
+	}
+	h2 {
+		font-family: $onjp;
+		text-align: center;
+		font-size: 38px;
+		margin-top: -30px;
+		margin-bottom: 50px;
+	}
+
+	h3 {
+		font-size: 27px;
+		margin-bottom: 0.4em;
+		margin-top: 0;
+	}
+
+	h4 {
+		font-size: 16px;
+		letter-spacing: 0.05em;
+		font-weight: normal;
+		margin-top: -7px;
+		margin-bottom: 20px;
+	}
+
+	h5 {
+		font-size: 20px;
+	}
+
+	h6 {
+		font-size: 20px;
+		margin-bottom: 0.3rem;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.8;
+	}
+}
+
+a {
 	color: black;
 }
-h5{
+
+h5 {
 	position: absolute;
 	top: 17px;
 	right: 20px;
 	border-bottom: 1px solid black;
 }
-.is-fullheight{
+
+.is-fullheight {
 	height: 100vh;
 }
-footer{
+
+footer {
 	text-align: center;
 	margin-top: 200px;
 	margin-bottom: 7px;
 	font-family: "Legacy Serif Book Italic";
 }
-#top{
+
+#top {
 	background: url('../img/top.jpg') center center;
 	background-size: cover;
 }
-#menu{
-	position: fixed;
-	top: 30px;
-	left: 30px;
-	transition: $anime;
-	&:hover{
-		opacity: 0.5;
-	}
-}
-#logo{
+
+#logo {
 	position: absolute;
 	left: 50%;
 	top: 20px;
 	transform: translateX(-50%);
 }
-#social{
+
+#social {
 	position: absolute;
 	right: 30px;
 	top: 30px;
-	#links{
-		img{
-			margin-left: 10px;
-		}
-		a{
-			transition: $anime;
-			&:hover{
-				opacity: 0.5;
-			}
-		}
-	}
-	#lang{
+
+	.lang {
 		font-family: $egmedium;
 		color: white;
 		text-align: right;
 		margin-top: 10px;
 		letter-spacing: 0.2em;
-		.active{
+
+		.active {
 			color: white;
 		}
-		.inactive{
+
+		.inactive {
 			color: rgba(255, 255, 255, 0.5);
 			transition: $anime;
-			&:hover{
-				color: rgba(255,255,255,1);
+
+			&:hover {
+				color: rgba(255, 255, 255, 1);
 			}
 		}
 	}
 }
-.content{
+
+.links {
+	a {
+		transition: $anime;
+		margin-left: 10px;
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.content {
 	margin-top: calc(200px - 3rem);
 	padding-left: 0;
 	padding-right: 0;
 }
-.photo{
+
+.photo {
 	margin-top: 200px;
 	background-size: cover;
 	background-position: center center;
 }
-.iconlink{
+
+.iconlink {
 	font-family: $icon;
 	font-size: 25px;
 	border: 1px solid black;
@@ -170,7 +209,8 @@ footer{
 	z-index: 2;
 	display: inline-block;
 	padding: 0 15px 2px;
-	&::before{
+
+	&::before {
 		overflow: hidden;
 		display: block;
 		content: '';
@@ -184,35 +224,43 @@ footer{
 		transition: $anime;
 		z-index: -1;
 	}
-	&:hover{
+
+	&:hover {
 		color: $main;
-		&::before{
+
+		&::before {
 			transform: translateY(0);
 		}
 	}
 }
-#img1{
+
+#img1 {
 	background-image: url('../img/img1.jpg');
 }
-#img2{
+
+#img2 {
 	background-image: url('../img/img2.jpg');
 }
-.lefttext{
+
+.lefttext {
 	position: relative;
 	padding: 15px 20px 0 10px;
 }
-.righttext{
+
+.righttext {
 	position: relative;
 	padding: 15px 10px 0 20px;
 }
-.rightphoto{
+
+.rightphoto {
 	position: absolute;
 	width: 50vw;
 	height: 500px;
 	background-size: cover;
 	background-position: center center;
 }
-.leftphoto{
+
+.leftphoto {
 	right: 0;
 	position: absolute;
 	width: 50vw;
@@ -220,32 +268,135 @@ footer{
 	background-size: cover;
 	background-position: center center;
 }
-.exphoto{
+
+.exphoto {
 	background-size: cover;
 	background-position: center center;
 	height: 400px;
 	width: 100%;
 }
-#kyoto{
+
+#kyoto {
 	height: 400px;
 	width: 100%;
 }
-#taipei{
+
+#taipei {
 	height: 400px;
 	width: 100%;
 }
-#extai{
+
+#extai {
 	background-image: url('../img/extai.png');
 }
-#exkyo{
+
+#exkyo {
 	background-image: url('../img/exkyoto.png');
 }
-#profile{
+
+#profilephoto {
 	background-image: url('../img/profile.jpg');
 }
-#class{
+
+#classphoto {
 	background-image: url('../img/class.jpg');
 }
-#gallery{
+
+#galleryphoto {
 	background-image: url('../img/gallery.jpg');
+}
+
+.menu-btn {
+	font-family: $icon;
+	position: fixed;
+	top: 20px;
+	left: 35px;
+	z-index: 999;
+	display: inline;
+	font-size: 32px;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.menu-btn a {
+	display: inline-block;
+	text-decoration: none;
+	/* safari hack */
+}
+
+.btn-open:after {
+	color: white;
+	font-family: $icon;
+	content: "D";
+	transition: $anime;
+}
+
+.btn-open:hover:after {
+	opacity: 0.5;
+}
+
+.btn-close:after {
+	color: #fff;
+	content: "C";
+	transition: $anime;
+	font-family: $icon;
+}
+
+.btn-close:hover:after {
+	opacity: 0.5;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	display: none;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	#menu{
+		position: absolute;
+		top: 48%;
+		transform: translateY(-50%);
+		margin-left: 35px;
+		div p{
+			font-size: 21px;
+			margin-bottom: 10px;
+			letter-spacing: 0.1em;
+			a{
+				color: white;
+				transition: $anime;
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+	.links{
+		margin-top: 50px;
+	}
+	.lang {
+		font-family: $egmedium;
+		color: white;
+		text-align: left;
+		margin-top: 10px;
+		letter-spacing: 0.2em;
+
+		.active {
+			color: white;
+		}
+
+		.inactive {
+			color: rgba(255, 255, 255, 0.5);
+			transition: $anime;
+
+			&:hover {
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
 }
