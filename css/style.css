@@ -7180,13 +7180,13 @@ footer {
 #logo {
   position: absolute;
   left: 50%;
-  top: 20px;
+  top: 30px;
   transform: translateX(-50%); }
 
 #social {
   position: absolute;
-  right: 30px;
-  top: 30px; }
+  right: 40px;
+  top: 35px; }
   #social .lang {
     font-family: "Legacy Serif Medium", serif;
     color: white;
@@ -7308,8 +7308,8 @@ footer {
 .menu-btn {
   font-family: "xiaoman icons";
   position: fixed;
-  top: 20px;
-  left: 35px;
+  top: 30px;
+  left: 45px;
   z-index: 999;
   display: inline;
   font-size: 32px; }
@@ -7348,12 +7348,12 @@ footer {
   overflow: auto;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); }
+  background: rgba(0, 0, 0, 0.8); }
   .overlay #menu {
     position: absolute;
     top: 48%;
     transform: translateY(-50%);
-    margin-left: 35px; }
+    margin-left: 45px; }
     .overlay #menu div p {
       font-size: 21px;
       margin-bottom: 10px;
