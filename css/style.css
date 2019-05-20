@@ -7111,61 +7111,147 @@ a.panel-block:hover, label.panel-block:hover {
   src: url("../fonts/xiaoman-Regular.eot") format("eot"), url("../fonts/xiaoman-Regular.woff2") format("woff2"), url("../fonts/xiaoman-Regular.woff") format("woff"); }
 
 body {
-  background-color: #D8D8C0;
+  background-color: #CCC6AA;
   overflow: hidden; }
 
 .relative {
-  position: relative;
-  height: 500px; }
+  position: relative; }
 
-.content.ma100 {
-  margin-top: calc(100px - 3rem); }
+.contents.ma100 {
+  margin-top: 100px; }
+
+.contents.ma50 {
+  margin-top: 50px; }
 
 #jp {
   font-family: "Legacy Serif Book", "I-OTF明朝オールドPro M", "IwaOMinPro-Md", serif; }
   #jp h3,
-  #jp h4,
-  #jp h5,
   #jp h6 {
     font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
   #jp #menu p {
-    font-family: "PKizaKinryouStdN-Bold", serif; }
+    font-family: "PKizaKinryouStdN-Medium", serif; }
+  #jp #menu p.sub {
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
   #jp h2 {
-    font-family: "PKizaKinryouStdN-Bold", serif;
+    font-family: "Legacy Serif Book", "PKizaKinryouStdN-Medium", serif;
     text-align: center;
     font-size: 38px;
     margin-top: -30px;
-    margin-bottom: 50px; }
+    margin-bottom: 40px;
+    color: #DDD; }
   #jp h3 {
-    font-size: 27px;
-    margin-bottom: 0.4em;
+    font-size: 38px;
+    margin-bottom: 0.7em;
     margin-top: 0; }
-  #jp h4 {
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    font-weight: normal;
-    margin-top: -7px;
-    margin-bottom: 20px; }
   #jp h5 {
-    font-size: 20px; }
+    font-size: 30px;
+    font-family: "Legacy Serif Book", "PKizaKinryouStdN-Medium", serif;
+    line-height: 1.3;
+    transform: translateX(-3px); }
   #jp h6 {
-    font-size: 20px;
-    margin-bottom: 0.3rem; }
+    line-height: 1.3;
+    color: black; }
+    #jp h6 span {
+      font-size: 17px; }
   #jp p {
-    font-size: 16px;
-    line-height: 1.8; }
+    font-size: 15px;
+    line-height: 1.9; }
+  #jp strong {
+    font-weight: normal;
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
+  @media screen and (min-width: 769px), print {
+    #jp h5 {
+      font-size: 24px; } }
 
 a {
   color: black; }
 
-h5 {
-  position: absolute;
-  top: 17px;
-  right: 20px;
-  border-bottom: 1px solid black; }
+.store .summary {
+  margin-top: 150px;
+  margin-bottom: 150px; }
+  .store .summary p {
+    margin-bottom: 20px; }
+
+@media screen and (min-width: 769px), print {
+  .store {
+    padding-left: 20px;
+    padding-right: 20px; } }
+
+.storetop {
+  height: calc(100vh - 40px);
+  width: calc(100vw - 40px);
+  margin-left: 20px; }
+  @media screen and (min-width: 769px), print {
+    .storetop {
+      margin-left: 0; } }
 
 .is-fullheight {
   height: 100vh; }
+
+#storetaipei {
+  padding-top: 20px; }
+  #storetaipei .storetop {
+    background: url("../img/taipei/storetop.jpg") center center;
+    background-size: cover;
+    position: relative; }
+    #storetaipei .storetop img {
+      position: absolute;
+      right: 15%;
+      bottom: 10%; }
+      @media screen and (min-width: 769px), print {
+        #storetaipei .storetop img {
+          right: 65px;
+          top: 50%;
+          transform: translateY(-50%); } }
+
+#storekyoto {
+  padding-top: 20px; }
+  #storekyoto .storetop {
+    background: url("../img/kyoto/storetop.jpg");
+    background-size: cover;
+    position: relative; }
+    #storekyoto .storetop img {
+      position: absolute;
+      left: 10%;
+      top: 10%; }
+      @media screen and (min-width: 769px), print {
+        #storekyoto .storetop img {
+          right: 65px;
+          top: 50%;
+          transform: translateY(-50%); } }
+
+#tai1 {
+  background: url("../img/taipei/gallery1.jpg") center center;
+  background-size: cover; }
+
+#tai2 {
+  background: url("../img/taipei/gallery2.jpg") center center;
+  background-size: cover; }
+
+#tai3 {
+  background: url("../img/taipei/gallery3.jpg") center center;
+  background-size: cover; }
+
+#kyo1 {
+  background: url("../img/kyoto/gallery3.jpg") center center;
+  background-size: cover; }
+
+#kyo2 {
+  background: url("../img/kyoto/gallery1.jpg") center center;
+  background-size: cover; }
+
+#kyo3 {
+  background: url("../img/kyoto/gallery2.jpg") center center;
+  background-size: cover; }
+
+.gphoto {
+  height: 800px;
+  width: 100%; }
+
+.gphoto2 {
+  height: 392px;
+  width: 100%;
+  margin-bottom: 16px; }
 
 footer {
   text-align: center;
@@ -7179,9 +7265,12 @@ footer {
 
 #logo {
   position: absolute;
-  left: 50%;
-  top: 30px;
-  transform: translateX(-50%); }
+  left: 150px;
+  bottom: 130px; }
+  @media screen and (min-width: 769px), print {
+    #logo {
+      left: 70px;
+      bottom: 150px; } }
 
 #social {
   position: absolute;
@@ -7200,6 +7289,12 @@ footer {
       transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
       #social .lang .inactive:hover {
         color: white; }
+  @media screen and (min-width: 769px), print {
+    #social {
+      right: 25px;
+      top: 20px; }
+      #social .lang {
+        margin-top: 5px; } }
 
 .links a {
   transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
@@ -7209,15 +7304,68 @@ footer {
   .links a:first-child {
     margin-left: 0; }
 
-.content {
-  margin-top: calc(200px - 3rem);
-  padding-left: 0;
-  padding-right: 0; }
+.centeredtitle {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 100px; }
+  .centeredtitle a {
+    margin: 0 3rem; }
+  @media screen and (min-width: 769px), print {
+    .centeredtitle {
+      margin-bottom: 50px; } }
+
+.contents {
+  margin-top: 200px; }
 
 .photo {
   margin-top: 200px;
   background-size: cover;
   background-position: center center; }
+
+.exhibit {
+  position: relative;
+  padding-top: 50px;
+  margin-top: 100px; }
+  .exhibit img {
+    width: 100%; }
+  .exhibit .iconlink {
+    position: absolute;
+    top: 50px;
+    right: 20px; }
+  @media screen and (min-width: 769px), print {
+    .exhibit {
+      padding-top: 0; }
+      .exhibit .iconlink {
+        top: 18px;
+        left: 12px;
+        right: auto; } }
+
+.excaption h6 {
+  font-size: 18px;
+  margin-bottom: 50px; }
+
+.excaption .period {
+  font-family: "Legacy Serif Medium", serif;
+  letter-spacing: 0.05em;
+  margin-bottom: 50px; }
+
+@media screen and (min-width: 769px), print {
+  .excaption h6 {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 5px; }
+  .excaption .period {
+    margin-bottom: 25px; } }
+
+.access {
+  padding-top: 50px; }
+  .access h6 {
+    margin-bottom: 5px; }
+  .access h5 {
+    margin-bottom: 50px; }
+  @media screen and (min-width: 769px), print {
+    .access h5 {
+      margin-bottom: 30px; } }
 
 .iconlink {
   font-family: "xiaoman icons";
@@ -7243,9 +7391,13 @@ footer {
     transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
     z-index: -1; }
   .iconlink:hover {
-    color: #D8D8C0; }
+    color: #CCC6AA; }
     .iconlink:hover::before {
       transform: translateY(0); }
+  @media screen and (min-width: 769px), print {
+    .iconlink {
+      font-size: 21px;
+      padding: 0 10px 3px; } }
 
 #img1 {
   background-image: url("../img/img1.jpg"); }
@@ -7253,57 +7405,48 @@ footer {
 #img2 {
   background-image: url("../img/img2.jpg"); }
 
-.lefttext {
-  position: relative;
-  padding: 15px 20px 0 10px; }
+#profile {
+  background-color: #292823;
+  margin-top: 0;
+  padding-top: 200px;
+  padding-bottom: 180px;
+  color: #DDD; }
+  #profile h6 {
+    margin-bottom: 1rem;
+    color: #DDD;
+    font-size: 20px; }
+  #profile .bio {
+    margin-top: 50px; }
+    #profile .bio:last-child {
+      margin-top: -200px; }
+      #profile .bio:last-child .column {
+        background-color: rgba(41, 40, 35, 0.5); }
+  @media screen and (min-width: 769px), print {
+    #profile {
+      padding-top: 150px;
+      padding-bottom: 130px; } }
 
-.righttext {
-  position: relative;
-  padding: 15px 10px 0 20px; }
-
-.rightphoto {
-  position: absolute;
-  width: 50vw;
-  height: 500px;
-  background-size: cover;
-  background-position: center center; }
-
-.leftphoto {
-  right: 0;
-  position: absolute;
-  width: 50vw;
-  height: 500px;
-  background-size: cover;
-  background-position: center center; }
-
-.exphoto {
-  background-size: cover;
-  background-position: center center;
-  height: 400px;
-  width: 100%; }
-
-#kyoto {
-  height: 400px;
-  width: 100%; }
-
-#taipei {
-  height: 400px;
-  width: 100%; }
-
-#extai {
-  background-image: url("../img/extai.png"); }
-
-#exkyo {
-  background-image: url("../img/exkyoto.png"); }
-
-#profilephoto {
-  background-image: url("../img/profile.jpg"); }
-
-#classphoto {
-  background-image: url("../img/class.jpg"); }
-
-#galleryphoto {
-  background-image: url("../img/gallery.jpg"); }
+#class {
+  margin-top: 280px;
+  padding-top: 20px; }
+  #class .border {
+    width: calc(100vw - 40px);
+    border: 1px solid;
+    margin-left: 20px;
+    padding-top: 150px;
+    padding-bottom: 100px; }
+  #class h3 {
+    text-align: center; }
+  #class .desc {
+    text-align: center;
+    margin-bottom: 50px; }
+    #class .desc span {
+      font-size: 0.9em; }
+  #class .classphoto {
+    height: 500px;
+    background: url("../img/class.jpg") center center;
+    background-size: cover;
+    margin-bottom: 20px; }
 
 .menu-btn {
   font-family: "xiaoman icons";
@@ -7315,6 +7458,58 @@ footer {
   font-size: 32px; }
   .menu-btn:hover {
     opacity: 0.5; }
+  @media screen and (min-width: 769px), print {
+    .menu-btn {
+      top: 15px;
+      left: 30px; } }
+
+.runborder {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  z-index: 0; }
+  .runborder:before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    content: '';
+    left: 0;
+    bottom: -1px; }
+  .runborder:after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    left: -30px;
+    bottom: -2px;
+    z-index: 1;
+    background-color: #CCC6AA;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
+  .runborder:hover {
+    color: black; }
+    .runborder:hover:after {
+      left: 100%; }
+
+#devider {
+  margin-top: 200px;
+  margin-bottom: 210px;
+  height: 1px;
+  background-color: black; }
+
+#taipei {
+  width: 100%;
+  height: 400px; }
+  @media screen and (min-width: 769px), print {
+    #taipei {
+      height: 300px; } }
+
+#kyoto {
+  width: 100%;
+  height: 400px; }
+  @media screen and (min-width: 769px), print {
+    #kyoto {
+      height: 300px; } }
 
 .menu-btn a {
   display: inline-block;
@@ -7326,6 +7521,12 @@ footer {
   font-family: "xiaoman icons";
   content: "D";
   transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
+
+.btn-open.background--light:after {
+  color: black; }
+
+.btn-open.background--dark:after {
+  color: white; }
 
 .btn-open:hover:after {
   opacity: 0.5; }
@@ -7355,14 +7556,19 @@ footer {
     transform: translateY(-50%);
     margin-left: 45px; }
     .overlay #menu div p {
-      font-size: 21px;
+      font-size: 23px;
       margin-bottom: 10px;
-      letter-spacing: 0.1em; }
+      letter-spacing: 0.05em; }
       .overlay #menu div p a {
         color: white;
         transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
         .overlay #menu div p a:hover {
           opacity: 0.5; }
+    .overlay #menu div p.sub {
+      margin-top: -10px;
+      font-size: 1.1em; }
+      .overlay #menu div p.sub a {
+        margin-left: 27px; }
   .overlay .links {
     margin-top: 50px; }
   .overlay .lang {

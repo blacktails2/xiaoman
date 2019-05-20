@@ -40,13 +40,17 @@ $jpbody: 'Legacy Serif Book',
 "I-OTF明朝オールドPro M",
 "IwaOMinPro-Md",
 serif;
-$jphead: 'Legacy Serif Medium',
+$jpbold: 'Legacy Serif Medium',
 'PKizaKinryouStdN-Bold',
 serif;
-$onjp: 'PKizaKinryouStdN-Bold',
+$jpthin: 'Legacy Serif Book',
+'PKizaKinryouStdN-Medium',
+serif;
+$onjp: 'PKizaKinryouStdN-Medium',
 serif;
 $icon: 'xiaoman icons';
-$main: #D8D8C0;
+$main: #CCC6AA;
+$whitegray: #DDD;
 
 body {
 	background-color: $main;
@@ -55,59 +59,76 @@ body {
 
 .relative {
 	position: relative;
-	height: 500px;
 }
 
-.content.ma100 {
-	margin-top: calc(100px - 3rem);
+.contents.ma100 {
+	margin-top: 100px;
+}
+
+.contents.ma50 {
+	margin-top: 50px;
 }
 
 #jp {
 	font-family: $jpbody;
 
 	h3,
-	h4,
-	h5,
 	h6 {
-		font-family: $jphead;
+		font-family: $jpbold;
 	}
-	#menu p{
+
+	#menu p {
 		font-family: $onjp;
 	}
+
+	#menu p.sub {
+		font-family: $jpbold;
+	}
+
 	h2 {
-		font-family: $onjp;
+		font-family: $jpthin;
 		text-align: center;
 		font-size: 38px;
 		margin-top: -30px;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
+		color: $whitegray;
 	}
 
 	h3 {
-		font-size: 27px;
-		margin-bottom: 0.4em;
+		font-size: 38px;
+		margin-bottom: 0.7em;
 		margin-top: 0;
 	}
 
-	h4 {
-		font-size: 16px;
-		letter-spacing: 0.05em;
-		font-weight: normal;
-		margin-top: -7px;
-		margin-bottom: 20px;
-	}
-
 	h5 {
-		font-size: 20px;
+		font-size: 30px;
+		font-family: $jpthin;
+		line-height: 1.3;
+		transform: translateX(-3px);
 	}
 
 	h6 {
-		font-size: 20px;
-		margin-bottom: 0.3rem;
+		line-height: 1.3;
+		color: black;
+
+		span {
+			font-size: 17px;
+		}
 	}
 
 	p {
-		font-size: 16px;
-		line-height: 1.8;
+		font-size: 15px;
+		line-height: 1.9;
+	}
+
+	strong {
+		font-weight: normal;
+		font-family: $jpbold;
+	}
+	@include tablet{
+		h5{
+			font-size: 24px;
+		}
 	}
 }
 
@@ -115,17 +136,115 @@ a {
 	color: black;
 }
 
-h5 {
-	position: absolute;
-	top: 17px;
-	right: 20px;
-	border-bottom: 1px solid black;
+
+.store {
+	.summary {
+		margin-top: 150px;
+		margin-bottom: 150px;
+
+		p {
+			margin-bottom: 20px;
+		}
+	}
+	@include tablet{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.storetop {
+	height: calc(100vh - 40px);
+	width: calc(100vw - 40px);
+	margin-left: 20px;
+	@include tablet{
+		margin-left: 0;
+	}
 }
 
 .is-fullheight {
 	height: 100vh;
 }
 
+#storetaipei {
+	padding-top: 20px;
+
+	.storetop {
+		background: url('../img/taipei/storetop.jpg') center center;
+		background-size: cover;
+		position: relative;
+
+		img {
+			position: absolute;
+			right: 15%;
+			bottom: 10%;
+			@include tablet{
+				right: 65px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+#storekyoto {
+	padding-top: 20px;
+
+	.storetop {
+		background: url('../img/kyoto/storetop.jpg');
+		background-size: cover;
+		position: relative;
+
+		img {
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			@include tablet{
+				right: 65px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+#tai1 {
+	background: url('../img/taipei/gallery1.jpg') center center;
+	background-size: cover;
+}
+
+#tai2 {
+	background: url('../img/taipei/gallery2.jpg') center center;
+	background-size: cover;
+}
+
+#tai3 {
+	background: url('../img/taipei/gallery3.jpg') center center;
+	background-size: cover;
+}
+#kyo1 {
+	background: url('../img/kyoto/gallery3.jpg') center center;
+	background-size: cover;
+}
+
+#kyo2 {
+	background: url('../img/kyoto/gallery1.jpg') center center;
+	background-size: cover;
+}
+
+#kyo3 {
+	background: url('../img/kyoto/gallery2.jpg') center center;
+	background-size: cover;
+}
+.gphoto {
+	height: 800px;
+	width: 100%;
+}
+
+.gphoto2 {
+	height: 392px;
+	width: 100%;
+	margin-bottom: 16px;
+}
 footer {
 	text-align: center;
 	margin-top: 200px;
@@ -140,9 +259,12 @@ footer {
 
 #logo {
 	position: absolute;
-	left: 50%;
-	top: 30px;
-	transform: translateX(-50%);
+	left: 150px;
+	bottom: 130px;
+	@include tablet{
+		left: 70px;
+		bottom: 150px;
+	}
 }
 
 #social {
@@ -170,6 +292,13 @@ footer {
 			}
 		}
 	}
+	@include tablet{
+		right: 25px;
+		top: 20px;
+		.lang{
+			margin-top: 5px;
+		}
+	}
 }
 
 .links {
@@ -187,16 +316,90 @@ footer {
 	}
 }
 
-.content {
-	margin-top: calc(200px - 3rem);
-	padding-left: 0;
-	padding-right: 0;
+.centeredtitle {
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 100px;
+
+	a {
+		margin: 0 3rem;
+	}
+	@include tablet{
+		margin-bottom: 50px;
+	}
+}
+
+.contents {
+	margin-top: 200px;
 }
 
 .photo {
 	margin-top: 200px;
 	background-size: cover;
 	background-position: center center;
+}
+
+.exhibit {
+	position: relative;
+	padding-top: 50px;
+	margin-top: 100px;
+
+	img {
+		width: 100%;
+	}
+
+	.iconlink {
+		position: absolute;
+		top: 50px;
+		right: 20px;
+	}
+	@include tablet{
+		padding-top: 0;
+		.iconlink{
+			top: 18px;
+			left: 12px;
+			right: auto;
+		}
+	}
+}
+.excaption {
+	h6 {
+		font-size: 18px;
+		margin-bottom: 50px;
+	}
+
+	.period {
+		font-family: $egmedium;
+		letter-spacing: 0.05em;
+		margin-bottom: 50px;
+	}
+	@include tablet{
+		h6{
+			font-size: 15px;
+			margin-top: 20px;
+			margin-bottom: 5px;
+		}
+		.period{
+			margin-bottom: 25px;
+		}
+	}
+}
+
+.access {
+	padding-top: 50px;
+
+	h6 {
+		margin-bottom: 5px;
+	}
+
+	h5 {
+		margin-bottom: 50px;
+	}
+	@include tablet{
+		h5{
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .iconlink {
@@ -232,6 +435,10 @@ footer {
 			transform: translateY(0);
 		}
 	}
+	@include tablet{
+		font-size: 21px;
+		padding: 0 10px 3px;
+	}
 }
 
 #img1 {
@@ -242,68 +449,65 @@ footer {
 	background-image: url('../img/img2.jpg');
 }
 
-.lefttext {
-	position: relative;
-	padding: 15px 20px 0 10px;
+#profile {
+	background-color: #292823;
+	margin-top: 0;
+	padding-top: 200px;
+	padding-bottom: 180px;
+	color: $whitegray;
+
+	h6 {
+		margin-bottom: 1rem;
+		color: $whitegray;
+		font-size: 20px;
+	}
+
+	.bio {
+		margin-top: 50px;
+		&:last-child{
+			margin-top: -200px;
+			.column{
+				background-color: rgba(41, 40, 35 ,0.5)
+			}
+		}
+	}
+	@include tablet{
+		padding-top: 150px;
+		padding-bottom: 130px;
+	}
 }
 
-.righttext {
-	position: relative;
-	padding: 15px 10px 0 20px;
-}
+#class {
+	margin-top: 280px;
+	padding-top: 20px;
 
-.rightphoto {
-	position: absolute;
-	width: 50vw;
-	height: 500px;
-	background-size: cover;
-	background-position: center center;
-}
+	.border {
+		width: calc(100vw - 40px);
+		border: 1px solid;
+		margin-left: 20px;
+		padding-top: 150px;
+		padding-bottom: 100px;
+	}
 
-.leftphoto {
-	right: 0;
-	position: absolute;
-	width: 50vw;
-	height: 500px;
-	background-size: cover;
-	background-position: center center;
-}
+	h3 {
+		text-align: center;
+	}
 
-.exphoto {
-	background-size: cover;
-	background-position: center center;
-	height: 400px;
-	width: 100%;
-}
+	.desc {
+		text-align: center;
+		margin-bottom: 50px;
 
-#kyoto {
-	height: 400px;
-	width: 100%;
-}
+		span {
+			font-size: 0.9em;
+		}
+	}
 
-#taipei {
-	height: 400px;
-	width: 100%;
-}
-
-#extai {
-	background-image: url('../img/extai.png');
-}
-
-#exkyo {
-	background-image: url('../img/exkyoto.png');
-}
-
-#profilephoto {
-	background-image: url('../img/profile.jpg');
-}
-
-#classphoto {
-	background-image: url('../img/class.jpg');
-}
-
-#galleryphoto {
-	background-image: url('../img/gallery.jpg');
+	.classphoto {
+		height: 500px;
+		background: url('../img/class.jpg') center center;
+		background-size: cover;
+		margin-bottom: 20px;
+	}
 }
 
 .menu-btn {
@@ -318,6 +522,70 @@ footer {
 	&:hover {
 		opacity: 0.5;
 	}
+	@include tablet{
+		top: 15px;
+		left: 30px;
+	}
+}
+
+.runborder {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	z-index: 0;
+
+	&:before {
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color: black;
+		content: '';
+		left: 0;
+		bottom: -1px;
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		width: 30px;
+		height: 3px;
+		left: -30px;
+		bottom: -2px;
+		z-index: 1;
+		background-color: $main;
+		transition: $anime;
+	}
+
+	&:hover {
+		color: black;
+
+		&:after {
+			left: 100%;
+		}
+	}
+}
+
+#devider {
+	margin-top: 200px;
+	margin-bottom: 210px;
+	height: 1px;
+	background-color: black;
+}
+
+#taipei {
+	width: 100%;
+	height: 400px;
+	@include tablet{
+		height: 300px;
+	}
+}
+
+#kyoto {
+	width: 100%;
+	height: 400px;
+	@include tablet{
+		height: 300px;
+	}
 }
 
 .menu-btn a {
@@ -331,6 +599,14 @@ footer {
 	font-family: $icon;
 	content: "D";
 	transition: $anime;
+}
+
+.btn-open.background--light:after {
+	color: black;
+}
+
+.btn-open.background--dark:after {
+	color: white;
 }
 
 .btn-open:hover:after {
@@ -358,27 +634,42 @@ footer {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.8);
-	#menu{
+
+	#menu {
 		position: absolute;
 		top: 48%;
 		transform: translateY(-50%);
 		margin-left: 45px;
-		div p{
-			font-size: 21px;
+
+		div p {
+			font-size: 23px;
 			margin-bottom: 10px;
-			letter-spacing: 0.1em;
-			a{
+			letter-spacing: 0.05em;
+
+			a {
 				color: white;
 				transition: $anime;
-				&:hover{
+
+				&:hover {
 					opacity: 0.5;
 				}
 			}
 		}
+
+		div p.sub {
+			margin-top: -10px;
+			font-size: 1.1em;
+
+			a {
+				margin-left: 27px;
+			}
+		}
 	}
-	.links{
+
+	.links {
 		margin-top: 50px;
 	}
+
 	.lang {
 		font-family: $egmedium;
 		color: white;
