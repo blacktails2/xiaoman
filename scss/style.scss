@@ -129,6 +129,9 @@ body {
 		h5{
 			font-size: 24px;
 		}
+		p{
+			font-size: 14px;
+		}
 	}
 }
 
@@ -488,7 +491,9 @@ footer {
 		padding-top: 150px;
 		padding-bottom: 100px;
 	}
-
+	span {
+			font-size: 0.9em;
+		}
 	h3 {
 		text-align: center;
 	}
@@ -496,10 +501,6 @@ footer {
 	.desc {
 		text-align: center;
 		margin-bottom: 50px;
-
-		span {
-			font-size: 0.9em;
-		}
 	}
 
 	.classphoto {
@@ -507,6 +508,12 @@ footer {
 		background: url('../img/class.jpg') center center;
 		background-size: cover;
 		margin-bottom: 20px;
+	}
+	@include tablet{
+		margin-top: 150px;
+		.border{
+			padding-top: 100px;
+		}
 	}
 }
 
