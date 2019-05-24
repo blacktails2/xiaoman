@@ -11,6 +11,7 @@
 	<script src="js/smooth-scroll.min.js"></script>
 	<script src="js/background-check.min.js"></script>
 	<script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?qdfWifIcjAc%3D&box=VurAYB5dxy4%3D&pm=1&aa=1&ab=1" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 </head>
 
 <body id="jp">
@@ -302,22 +303,27 @@
 						<h5>台北</h5>
 						<p>
 							毎月1回 全6クラス<br>
-							各クラス定員10名
+							各クラス定員10名<br>
+							<a class="runborder" href="mailto:xiaoman.cs@gmail.com?subject=中国茶教室について">
+						xiaoman.cs@gmail.com</a>
 						</p>
-						<a href="" class="iconlink">A</a>
 					</div>
 					<div class="column is-6">
 						<h5>京都</h5>
 						<p>
 							毎月1回 全6クラス<br>
-							各クラス定員10名
+							各クラス定員10名<br>
+							<a class="runborder" href="mailto:xiaoman.kyoto@gmail.com?subject=中国茶教室について">
+						xiaoman.kyoto@gmail.com</a>
 						</p>
 					</div>
 					<div class="column is-6">
 						<h5>東京</h5>
 						<p>
 							隔月1回 全6クラス<br>
-							各クラス定員10名
+							各クラス定員10名<br>
+							<a class="runborder" href="mailto:xiaoman.tokyo@gmail.com?subject=中国茶教室について">
+						xiaoman.tokyo@gmail.com</a>
 						</p>
 					</div>
 					<div class="column is-6">
@@ -764,6 +770,19 @@
 		targets: '.btn-open'
 	});
 	</script>
+	<script>
+var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e) {
+	console.info('Action:', e.action);
+	console.info('Text:', e.text);
+	console.info('Trigger:', e.trigger);
+	var obj = document.getElementById("cpy");
+	obj.innerHTML = "コピーしました";
+
+	e.clearSelection();
+});
+</script>
 </body>
 
 </html>
