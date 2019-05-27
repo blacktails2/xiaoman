@@ -7110,6 +7110,16 @@ a.panel-block:hover, label.panel-block:hover {
   src: url("../fonts/xiaoman-Regular.eot");
   src: url("../fonts/xiaoman-Regular.eot") format("eot"), url("../fonts/xiaoman-Regular.woff2") format("woff2"), url("../fonts/xiaoman-Regular.woff") format("woff"); }
 
+@font-face {
+  font-family: "KOKizahashiKinryo-M";
+  font-weight: normal;
+  src: url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff2?token=7_4ms64bc4h7kkoz") format("woff2"), url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff?token=7_4ms64bc4h7kkoz") format("woff"), url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype"); }
+
+@font-face {
+  font-family: "KOKizahashiKinryo-B";
+  font-weight: normal;
+  src: url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff2?token=7_4ms64bc4h7kkoz") format("woff2"), url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff?token=7_4ms64bc4h7kkoz") format("woff"), url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype"); }
+
 body {
   background-color: #CCC6AA;
   overflow: hidden; }
@@ -7127,13 +7137,13 @@ body {
   font-family: "Legacy Serif Book", "I-OTF明朝オールドPro M", "IwaOMinPro-Md", serif; }
   #jp h3,
   #jp h6 {
-    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", "KOKizahashiKinryo-B", serif; }
   #jp #menu p {
-    font-family: "PKizaKinryouStdN-Medium", serif; }
+    font-family: "PKizaKinryouStdN-Medium", "KOKizahashiKinryo-M", serif; }
   #jp #menu p.sub {
-    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", "KOKizahashiKinryo-B", serif; }
   #jp h2 {
-    font-family: "Legacy Serif Book", "PKizaKinryouStdN-Medium", serif;
+    font-family: "Legacy Serif Book", "PKizaKinryouStdN-Medium", "KOKizahashiKinryo-M", serif;
     text-align: center;
     font-size: 38px;
     margin-top: -30px;
@@ -7145,7 +7155,7 @@ body {
     margin-top: 0; }
   #jp h5 {
     font-size: 30px;
-    font-family: "Legacy Serif Book", "PKizaKinryouStdN-Medium", serif;
+    font-family: "Legacy Serif Book", "PKizaKinryouStdN-Medium", "KOKizahashiKinryo-M", serif;
     line-height: 1.3;
     transform: translateX(-3px); }
   #jp h6 {
@@ -7158,7 +7168,7 @@ body {
     line-height: 1.9; }
   #jp strong {
     font-weight: normal;
-    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif; }
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", "KOKizahashiKinryo-B", serif; }
   @media screen and (min-width: 769px) and (max-width: 1087px) {
     #jp h5 {
       font-size: 24px; }
@@ -7200,7 +7210,7 @@ a {
     letter-spacing: 0.05em;
     margin-bottom: 50px; }
   .store .exhibit .excaption strong {
-    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", serif;
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", "KOKizahashiKinryo-B", serif;
     font-size: 1.1em; }
 
 .store .access {

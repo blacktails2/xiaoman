@@ -32,6 +32,20 @@
 	src: url('../fonts/xiaoman-Regular.eot');
 	src: url("../fonts/xiaoman-Regular.eot") format("eot"), url("../fonts/xiaoman-Regular.woff2") format("woff2"), url("../fonts/xiaoman-Regular.woff") format("woff");
 }
+@font-face{
+	font-family: "KOKizahashiKinryo-M";
+	font-weight: normal;
+	src:url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff2?token=7_4ms64bc4h7kkoz") format("woff2"),
+	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff?token=7_4ms64bc4h7kkoz") format("woff"),
+	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype");
+}
+@font-face{
+	font-family: "KOKizahashiKinryo-B";
+	font-weight: normal;
+	src:url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff2?token=7_4ms64bc4h7kkoz") format("woff2"),
+	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff?token=7_4ms64bc4h7kkoz") format("woff"),
+	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype");
+}
 
 $egmedium: 'Legacy Serif Medium',
 serif;
@@ -41,12 +55,12 @@ $jpbody: 'Legacy Serif Book',
 "IwaOMinPro-Md",
 serif;
 $jpbold: 'Legacy Serif Medium',
-'PKizaKinryouStdN-Bold',
+'PKizaKinryouStdN-Bold', "KOKizahashiKinryo-B", 
 serif;
 $jpthin: 'Legacy Serif Book',
-'PKizaKinryouStdN-Medium',
+'PKizaKinryouStdN-Medium', "KOKizahashiKinryo-M",
 serif;
-$onjp: 'PKizaKinryouStdN-Medium',
+$onjp: 'PKizaKinryouStdN-Medium', "KOKizahashiKinryo-M",
 serif;
 $icon: 'xiaoman icons';
 $main: #CCC6AA;
