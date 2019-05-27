@@ -10,12 +10,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<script src="js/smooth-scroll.min.js"></script>
 	<script src="js/background-check.min.js"></script>
-	<script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?qdfWifIcjAc%3D&box=VurAYB5dxy4%3D&pm=1&aa=1&ab=1" charset="utf-8"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+	<script src="js/in-view.min.js"></script>
+	<script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?qdfWifIcjAc%3D&box=VurAYB5dxy4%3D&aa=1&ab=1" charset="utf-8"></script>
 </head>
 
 <body id="jp">
-	<section class="section is-fullheight" id="top">
+	<section class="ccolor is-fullheight" id="top" data-background-color="white">
 		<div class="menu-btn">
 			<a class="btn-open" href="javascript:void(0)"></a>
 		</div>
@@ -39,7 +39,8 @@
 			</div>
 		</div>
 		<div id="logo">
-			<img src="img/logo.svg" alt="">
+			<img class="is-hidden-mobile" src="img/logo.svg" alt="小慢Tea Experimence">
+			<img class="is-hidden-tablet" src="img/logomobile.svg" alt="小慢Tea Experience">
 		</div>
 		<div id="social">
 			<div class="links">
@@ -50,7 +51,7 @@
 			<p class="lang"><a href="index.html" class="active">JP</a> / <a href="" class="inactive">CH</a> / <a href="" class="inactive">EN</a></p>
 		</div>
 	</section>
-	<section class="section content" id="profile">
+	<section class="section content ccolor" id="profile" data-background-color="white">
 		<div class="container">
 			<h2>暮らしの中に美を見つける</h2>
 			<div class="columns is-centered">
@@ -106,11 +107,11 @@
 			</div>
 		</div>
 	</section>
-	<div class="centeredtitle">
+	<div class="centeredtitle ccolor" data-background-color="black">
 		<h3>店舗</h3>
-		<strong><a class="runborder" href="#storetaipei">→台北小慢</a><a class="runborder" href="#kyoto">→京都小慢</a></strong>
+		<strong><a class="runborder" href="#storetaipei">↓台北小慢</a><a class="runborder" href="#storekyoto">↓京都小慢</a></strong>
 	</div>
-	<section class="store" id="storetaipei">
+	<section class="store ccolor" id="storetaipei" data-background-color="black">
 		<div class="storetop">
 			<img src="img/taipeitop.svg" alt="台北 小慢・茶藝館">
 		</div>
@@ -120,13 +121,13 @@
 					<p>
 						閑静な大安区にある台北小慢。風が抜ける店内では野放茶、自然生態茶などをお飲みいただけます。月に一度国内外の作品をご覧いただく企画展も開催しております。
 					</p>
-					<strong><a class="runborder" href="#access-t">→店舗のご案内</a></strong>
+					<strong><a class="runborder" href="#access-t">↓店舗のご案内</a></strong>
 				</div>
 				<div class="column is-4-desktop is-5-tablet">
 					<img src="img/taipei/sumb.jpg" alt="台北小慢の外観">
 				</div>
 			</div>
-			<div class="columns is-variable is-2 gallery">
+			<div class="columns is-variable is-2 gallery is-hidden-mobile">
 				<div class="column">
 					<div class="gphoto" id="tai1"></div>
 				</div>
@@ -187,14 +188,14 @@
 				</div>
 			</div>
 	</section>
-	<div class="container">
-		<div class="columns is-centered">
-			<div class="column is-6">
+	<div class="container ccolor" data-background-color="black">
+		<div class="columns is-centered is-mobile">
+			<div class="column is-6-desktop is-8-tablet is-10-mobile">
 				<div id="devider"></div>
 			</div>
 		</div>
 	</div>
-	<section class="store" id="storekyoto">
+	<section class="store color" id="storekyoto" data-background-color="black">
 		<div class="storetop">
 			<img src="img/kyototop.svg" alt="京都 小慢・ギャラリー">
 		</div>
@@ -204,13 +205,13 @@
 					<p>
 						御所北 静かな住宅街の一角に佇む築100年の小さな町屋をリノベーションした京都小慢。自然生態の台湾、中国茶葉の販売。現代作家、骨董の茶道具を中心に取り揃えたギャラリースペースとなります。
 					</p>
-					<strong><a class="runborder" href="#access-k">→店舗のご案内</a></strong>
+					<strong><a class="runborder" href="#access-k">↓店舗のご案内</a></strong>
 				</div>
 				<div class="column is-4-desktop is-5-tablet">
 					<img src="img/kyoto/sumb.jpg" alt="京都小慢の外観">
 				</div>
 			</div>
-			<div class="columns is-variable is-2 gallery">
+			<div class="columns is-variable is-2 gallery is-hidden-mobile">
 				<div class="column">
 					<div class="gphoto2" id="kyo2"></div>
 					<div class="gphoto2" id="kyo3"></div>
@@ -223,25 +224,97 @@
 				<div class="column is-7 is-hidden-touch"><img src="img/exkyoto.png" alt=""></div>
 				<div class="column excaption is-hidden-touch">
 					<h6>現在の展示</h6>
-					<h5>展示会名</h5>
+					<h5>西家智津子 陶展</h5>
 					<a href="" class="iconlink">A</a>
-					<p class="period">2019. 5. 1 – 5. 2</p>
+					<p class="period">2019. 5. 19 – 6. 17</p>
 					<p>
-						展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示
+						今回の個展のテーマはアリスのお茶会。<br>
+						オブジェをメインに作っている私が、自分の手にしか出せないフォルムや同じものが二つとしてない、不思議な器のワンダーランドにアリスになったような気持ちで迷い込んでいただけると嬉しいです。<br>
+						<br><strong>西家智津子（CHIZUKO NISHIKE)<br></strong>
+						大阪芸術大学大学院 芸術研究科博士前期 芸術制作 修了 <br>
+						デザイン事務所・美術研究所（絵画教室講師）勤務を経て<br>
+						現在atelier NICIQUE(奈良)にて制作。<br>
+						2002年より関西を中心に個展を開催。<br>
+						昨年2018年は台北での初個展。<br>
+						<br><strong>喫茶のご案内<br></strong>
+						5月19日（日曜）<br>
+						12時〜<br>
+						14時〜<br>
+						16時〜<br>
+						京都小慢2階<br>
+						参加費 2.500円<br>
+						今展示に合わせ、喫茶のご案内です。<br>
+						2種類のお茶とご一緒に奈良の「パティスリークリアン」より西家さんの展示会コンセプトに合わせた出来たての生菓子&焼き菓子をお召し上がりいただけます。<br>
+						（※ご予約優先とさせていただきます）<br>
+						ご希望のお時間とお値段をお知らせ下さいませ。<br>
+						展示会期間中、焼き菓子と台湾茶のティーセットもご用意致しております。<br>
+						<br><strong>田中千佳子<br></strong>
+						奈良生まれ<br>
+						20代後半 インテリアデザインの世界から一転<br>
+						プロのパティシエを目指す<br>
+						クリアンに在籍中<br>
+						LA VIEILLE FRANCE 木村シェフの勧めでパリの職人育成学校 BELLOUET CONSEIL に留学<br>
+						帰国後独立し<br>
+						奈良県桜井市にて 焼き菓子の工房 “ChiccA “をオープン<br>
+						その後クリアンのシェフと結婚<br>
+						現在に至る<br>
+						2017年4人からなるユニット<br>
+						「六香」のメンバーとしてパリのエスパス・バルタン・ポワレにて”旅する茶箱展”に参加<br>
+						お菓子のコフレ製作発表<br>
+						キラキラとしたパリのお菓子も好きだけれどヨーロッパの田舎で見かける素朴な伝統菓子や修道院のお菓子に心惹かれ続けています。<br>
+						<br><strong>予約問い合わせ<br></strong>
+						京都小慢<br>
+						xiaoman.kyoto@gmail.com
 					</p>
 				</div>
 				<div class="column is-10 is-hidden-desktop excaption">
 					<img src="img/exkyoto.png" alt="">
 					<h6>現在の展示</h6>
-					<h5>展示会名</h5>
-					<p class="period">2019. 5. 1 – 5. 2</p>
+					<h5>西家智津子 陶展</h5>
+					<p class="period">2019. 5. 19 – 6. 17</p>
 					<div class="columns">
 						<div class="column is-3 relative">
 							<a href="" class="iconlink">A</a>
 						</div>
 						<div class="column">
 							<p>
-								展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示内容展示
+								今回の個展のテーマはアリスのお茶会。<br>
+						オブジェをメインに作っている私が、自分の手にしか出せないフォルムや同じものが二つとしてない、不思議な器のワンダーランドにアリスになったような気持ちで迷い込んでいただけると嬉しいです。<br>
+						<br><strong>西家智津子（CHIZUKO NISHIKE)<br></strong>
+						大阪芸術大学大学院 芸術研究科博士前期 芸術制作 修了<br>
+						デザイン事務所・美術研究所（絵画教室講師）勤務を経て<br>
+						現在atelier NICIQUE(奈良)にて制作。<br>
+						2002年より関西を中心に個展を開催。<br>
+						昨年2018年は台北での初個展。<br>
+						<br><strong>喫茶のご案内<br></strong>
+						5月19日（日曜）<br>
+						12時〜<br>
+						14時〜<br>
+						16時〜<br>
+						京都小慢2階<br>
+						参加費 2.500円<br>
+						今展示に合わせ、喫茶のご案内です。<br>
+						2種類のお茶とご一緒に奈良の「パティスリークリアン」より西家さんの展示会コンセプトに合わせた出来たての生菓子&焼き菓子をお召し上がりいただけます。<br>
+						（※ご予約優先とさせていただきます）<br>
+						ご希望のお時間とお値段をお知らせ下さいませ。<br>
+						展示会期間中、焼き菓子と台湾茶のティーセットもご用意致しております。<br>
+						<br><strong>田中千佳子<br></strong>
+						奈良生まれ<br>
+						20代後半 インテリアデザインの世界から一転<br>
+						プロのパティシエを目指す<br>
+						クリアンに在籍中<br>
+						LA VIEILLE FRANCE 木村シェフの勧めでパリの職人育成学校 BELLOUET CONSEIL に留学<br>
+						帰国後独立し<br>
+						奈良県桜井市にて 焼き菓子の工房 “ChiccA “をオープン<br>
+						その後クリアンのシェフと結婚<br>
+						現在に至る<br>
+						2017年 4人からなるユニット<br>
+						「六香 」のメンバーとしてパリのエスパス・バルタン・ポワレにて”旅する茶箱展”に参加<br>
+						お菓子のコフレ製作発表<br>
+						キラキラとしたパリのお菓子も好きだけれどヨーロッパの田舎で見かける素朴な伝統菓子や修道院のお菓子に心惹かれ続けています。<br>
+						<br><strong>予約問い合わせ<br></strong>
+						京都小慢<br>
+						xiaoman.kyoto@gmail.com
 							</p>
 						</div>
 					</div>
@@ -274,7 +347,7 @@
 				</div>
 			</div>
 	</section>
-	<section class="contents" id="class">
+	<section class="contents ccolor" id="class" data-background-color="black">
 		<div class="border">
 			<div class="container">
 				<h3>
@@ -767,20 +840,14 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPXRq0cIGmNHhF9ofN61bIZXqvQZa-cFY&callback=initializeMaps" async defer></script>
 	<script>
 	BackgroundCheck.init({
-		targets: '.btn-open'
+		targets: '.btn-open',
 	});
 	</script>
-	<script>
-var clipboard = new ClipboardJS('.btn');
-
-clipboard.on('success', function(e) {
-	console.info('Action:', e.action);
-	console.info('Text:', e.text);
-	console.info('Trigger:', e.trigger);
-	var obj = document.getElementById("cpy");
-	obj.innerHTML = "コピーしました";
-
-	e.clearSelection();
+<script>
+	var $target = $('.btn-open');
+inView('.ccolor').on('enter', function(el){
+  var color = $(el).attr('data-background-color');
+  $target.css('color', color );
 });
 </script>
 </body>
