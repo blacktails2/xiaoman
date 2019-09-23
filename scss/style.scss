@@ -32,19 +32,21 @@
 	src: url('../fonts/xiaoman-Regular.eot');
 	src: url("../fonts/xiaoman-Regular.eot") format("eot"), url("../fonts/xiaoman-Regular.woff2") format("woff2"), url("../fonts/xiaoman-Regular.woff") format("woff");
 }
-@font-face{
+
+@font-face {
 	font-family: "KOKizahashiKinryo-M";
 	font-weight: normal;
-	src:url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff2?token=7_4ms64bc4h7kkoz") format("woff2"),
-	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff?token=7_4ms64bc4h7kkoz") format("woff"),
-	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype");
+	src: url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff2?token=7_4ms64bc4h7kkoz") format("woff2"),
+		url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.woff?token=7_4ms64bc4h7kkoz") format("woff"),
+		url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-M.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype");
 }
-@font-face{
+
+@font-face {
 	font-family: "KOKizahashiKinryo-B";
 	font-weight: normal;
-	src:url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff2?token=7_4ms64bc4h7kkoz") format("woff2"),
-	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff?token=7_4ms64bc4h7kkoz") format("woff"),
-	url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype");
+	src: url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff2?token=7_4ms64bc4h7kkoz") format("woff2"),
+		url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.woff?token=7_4ms64bc4h7kkoz") format("woff"),
+		url("https://www.font-stream.com/fontdata/KOKizahashiKinryo-B.eot?token=7_4ms64bc4h7kkoz") format("embedded-opentype");
 }
 
 $egmedium: 'Legacy Serif Medium',
@@ -55,12 +57,15 @@ $jpbody: 'Legacy Serif Book',
 "IwaOMinPro-Md",
 serif;
 $jpbold: 'Legacy Serif Medium',
-'PKizaKinryouStdN-Bold', "KOKizahashiKinryo-B", 
+'PKizaKinryouStdN-Bold',
+"KOKizahashiKinryo-B",
 serif;
 $jpthin: 'Legacy Serif Book',
-'PKizaKinryouStdN-Medium', "KOKizahashiKinryo-M",
+'PKizaKinryouStdN-Medium',
+"KOKizahashiKinryo-M",
 serif;
-$onjp: 'PKizaKinryouStdN-Medium', "KOKizahashiKinryo-M",
+$onjp: 'PKizaKinryouStdN-Medium',
+"KOKizahashiKinryo-M",
 serif;
 $icon: 'xiaoman icons';
 $main: #CCC6AA;
@@ -109,9 +114,10 @@ body {
 	}
 
 	h3 {
-		font-size: 38px;
-		margin-bottom: 0.7em;
-		margin-top: 0;
+		font-size: 28px;
+		margin-bottom: 2em;
+		margin-top: 3rem;
+		text-align: center;
 	}
 
 	h5 {
@@ -170,6 +176,36 @@ a {
 	color: black;
 }
 
+.top_exhibit {
+	img{
+		width: 100%;
+	}
+	.excaption {
+		position: relative;
+		padding-top: 1rem;
+
+		.iconlink {
+			position: absolute;
+			top: 10px;
+			right: 0;
+		}
+
+		h6 {
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+
+		.period {
+			font-family: $egmedium;
+			letter-spacing: 0.05em;
+		}
+
+		strong {
+			font-family: $jpbold;
+			font-size: 1.1em;
+		}
+	}
+}
 
 .store {
 	.summary {
@@ -207,7 +243,8 @@ a {
 				letter-spacing: 0.05em;
 				margin-bottom: 50px;
 			}
-			strong{
+
+			strong {
 				font-family: $jpbold;
 				font-size: 1.1em;
 			}
@@ -280,6 +317,7 @@ a {
 		.exhibit {
 			margin-top: 0;
 			padding-top: 0;
+
 			.iconlink {
 				top: 0;
 				left: 12px;
@@ -312,8 +350,9 @@ a {
 				}
 			}
 		}
-		.access{
-			h5{
+
+		.access {
+			h5 {
 				margin-bottom: 20px;
 			}
 		}
@@ -336,6 +375,11 @@ a {
 
 .is-fullheight {
 	height: 100vh;
+}
+
+.is-height90 {
+	height: 90vh;
+	position: relative;
 }
 
 #storetaipei {
@@ -386,6 +430,7 @@ a {
 				left: auto;
 				transform: translateY(-50%);
 			}
+
 			@include mobile {
 				right: 30px;
 				top: 50%;
@@ -430,7 +475,8 @@ a {
 .gphoto {
 	height: 800px;
 	width: 100%;
-	@include tablet-only{
+
+	@include tablet-only {
 		height: 600px;
 	}
 }
@@ -439,7 +485,8 @@ a {
 	height: 392px;
 	width: 100%;
 	margin-bottom: 16px;
-	@include tablet-only{
+
+	@include tablet-only {
 		height: 292px;
 	}
 }
@@ -449,10 +496,12 @@ footer {
 	margin-top: 200px;
 	margin-bottom: 7px;
 	font-family: "Legacy Serif Book Italic";
-	@include tablet-only{
+
+	@include tablet-only {
 		margin-top: 150px;
 	}
-	@include mobile{
+
+	@include mobile {
 		margin-top: 100px;
 	}
 }
@@ -464,12 +513,11 @@ footer {
 
 #logo {
 	position: absolute;
-	left: 150px;
-	bottom: 130px;
+	left: 32px;
+	top: 110px;
 
 	@include tablet-only {
-		left: 70px;
-		bottom: 150px;
+		left: 20px;
 	}
 
 	@include mobile {
@@ -517,12 +565,28 @@ footer {
 
 	@include mobile {
 		right: 20px;
-		bottom: 13px;
-		top: auto;
+		top: 18px;
 
 		.lang {
 			margin-top: 0;
 		}
+	}
+}
+
+#pages {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	a {
+		color: white;
+		font-size: 1.3em;
+		margin: 0 1rem;
+		font-family: $onjp;
 	}
 }
 
@@ -714,21 +778,26 @@ footer {
 			padding-top: 100px;
 		}
 	}
-	@include mobile{
+
+	@include mobile {
 		margin-top: 100px;
-		.border{
+
+		.border {
 			padding-top: 50px;
 			padding-left: 20px;
 			padding-right: 20px;
 			padding-bottom: 50px;
 		}
-		.desc{
+
+		.desc {
 			text-align: left;
-			br:nth-child(-n+4){
+
+			br:nth-child(-n+4) {
 				display: none;
 			}
 		}
-		.classphoto{
+
+		.classphoto {
 			height: 300px;
 		}
 	}
@@ -736,7 +805,7 @@ footer {
 
 .menu-btn {
 	font-family: $icon;
-	position: fixed;
+	position: absolute;
 	top: 30px;
 	left: 45px;
 	z-index: 999;
@@ -803,11 +872,13 @@ footer {
 	margin-bottom: 210px;
 	height: 1px;
 	background-color: black;
-	@include tablet-only{
+
+	@include tablet-only {
 		margin-top: 150px;
 		margin-bottom: 160px;
 	}
-	@include mobile{
+
+	@include mobile {
 		margin-top: 100px;
 		margin-bottom: 100px;
 	}
@@ -837,6 +908,7 @@ footer {
 	@include tablet-only {
 		height: 300px;
 	}
+
 	@include mobile {
 		height: 300px;
 		width: 100vw;
@@ -853,18 +925,10 @@ footer {
 }
 
 .btn-open:after {
-	color: inherit;
+	color: white;
 	font-family: $icon;
 	content: "D";
 	transition: $anime;
-}
-
-.btn-open.background--light:after {
-	color: black;
-}
-
-.btn-open.background--dark:after {
-	color: white;
 }
 
 .btn-open:hover:after {

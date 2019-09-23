@@ -7150,9 +7150,10 @@ body {
     margin-bottom: 40px;
     color: #DDD; }
   #jp h3 {
-    font-size: 38px;
-    margin-bottom: 0.7em;
-    margin-top: 0; }
+    font-size: 28px;
+    margin-bottom: 2em;
+    margin-top: 3rem;
+    text-align: center; }
   #jp h5 {
     font-size: 30px;
     font-family: "Legacy Serif Book", "PKizaKinryouStdN-Medium", "KOKizahashiKinryo-M", serif;
@@ -7185,6 +7186,26 @@ body {
 
 a {
   color: black; }
+
+.top_exhibit img {
+  width: 100%; }
+
+.top_exhibit .excaption {
+  position: relative;
+  padding-top: 1rem; }
+  .top_exhibit .excaption .iconlink {
+    position: absolute;
+    top: 10px;
+    right: 0; }
+  .top_exhibit .excaption h6 {
+    font-size: 18px;
+    margin-bottom: 30px; }
+  .top_exhibit .excaption .period {
+    font-family: "Legacy Serif Medium", serif;
+    letter-spacing: 0.05em; }
+  .top_exhibit .excaption strong {
+    font-family: "Legacy Serif Medium", "PKizaKinryouStdN-Bold", "KOKizahashiKinryo-B", serif;
+    font-size: 1.1em; }
 
 .store .summary {
   margin-top: 150px;
@@ -7292,6 +7313,10 @@ a {
 .is-fullheight {
   height: 100vh; }
 
+.is-height90 {
+  height: 90vh;
+  position: relative; }
+
 #storetaipei {
   padding-top: 20px; }
   #storetaipei .storetop {
@@ -7395,12 +7420,11 @@ footer {
 
 #logo {
   position: absolute;
-  left: 150px;
-  bottom: 130px; }
+  left: 32px;
+  top: 110px; }
   @media screen and (min-width: 769px) and (max-width: 1087px) {
     #logo {
-      left: 70px;
-      bottom: 150px; } }
+      left: 20px; } }
   @media screen and (max-width: 768px) {
     #logo {
       bottom: auto;
@@ -7434,10 +7458,23 @@ footer {
   @media screen and (max-width: 768px) {
     #social {
       right: 20px;
-      bottom: 13px;
-      top: auto; }
+      top: 18px; }
       #social .lang {
         margin-top: 0; } }
+
+#pages {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center; }
+  #pages a {
+    color: white;
+    font-size: 1.3em;
+    margin: 0 1rem;
+    font-family: "PKizaKinryouStdN-Medium", "KOKizahashiKinryo-M", serif; }
 
 .links a {
   transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s;
@@ -7586,7 +7623,7 @@ footer {
 
 .menu-btn {
   font-family: "xiaoman icons";
-  position: fixed;
+  position: absolute;
   top: 30px;
   left: 45px;
   z-index: 999;
@@ -7682,16 +7719,10 @@ footer {
   /* safari hack */ }
 
 .btn-open:after {
-  color: inherit;
+  color: white;
   font-family: "xiaoman icons";
   content: "D";
   transition: cubic-bezier(0.215, 0.61, 0.355, 1) all 0.6s; }
-
-.btn-open.background--light:after {
-  color: black; }
-
-.btn-open.background--dark:after {
-  color: white; }
 
 .btn-open:hover:after {
   opacity: 0.5; }
